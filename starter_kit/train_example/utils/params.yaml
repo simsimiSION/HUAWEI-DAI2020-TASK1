@@ -1,0 +1,76 @@
+
+
+# 枸酱obs参数
+construct_obs:
+  # norm
+  norm_position: 100.0
+  norm_distance: 30
+  norm_velocity: 3.0
+  norm_heading: 3.1415926
+  norm_bounding_box: 4.0
+  # lidar obs 
+  lidar_ratio: 12
+  # n-nearest obs
+  n: 4
+
+
+# 构建reward参数
+construct_reward:
+  # reward coefficient                            #    v1.3  v1.3.1
+  env_reward_coefficient: 3.0                     #     3.0   3.0
+  distance_from_center_coefficient: 0.5           #     0.1   0.2
+  crash_penalty_coefficient: 20.0                 #     5.0   10.0
+  time_penalty_coefficient: 0.5                   #     0.5   0.5
+  off_road_penalty_coefficient: 20.0              #     5.0   10.0
+  #                                          reward:    220   250
+  crash_threshold : 0.4
+
+  
+# 环境
+env:
+  scenario: "../dataset_public/misc/"
+  agent_id: "AGENT-007"
+  max_episode_steps: 1000
+  headless: False
+
+
+# 评估
+evaluate:
+  alpha: 0.4
+  beta: 0.1
+  gamma: 0.5 
+
+
+# Safety
+safety:
+  # 曲率采样点
+  curvature_foresight_1: 12
+  curvature_foresight_2: 13
+  curvature_foresight_3: 14
+  curvature_foresight_4: 15
+  curvature_foresight_5: 16
+  # 速度level
+  speed_level_0: 1.0
+  speed_level_1: 0.7 
+  speed_level_2: 0.5  
+  speed_level_3: 0.3  
+  speed_level_4: 0.2
+  speed_level_5: 0.1
+  speed_level_6: 0.0000000001
+  # 曲率阈值
+  curvature_threshold_level_1: 0.4
+  curvature_threshold_level_2: 0.7
+  # 速度阈值(根据距离参数)
+  car_limit_distance: 15.
+  distance_level_1: 12.
+  distance_level_2: 9.
+  distance_level_3: 6.
+  distance_level_4: 3.
+  distance_level_5: 2.
+
+  # 危险距离
+  threaten_distance_front: 10
+  threaten_distance_back: 5
+  threaten_distance_left: 0.2
+  threaten_distance_limit_front: 7
+  threaten_distance_limit_back: 2

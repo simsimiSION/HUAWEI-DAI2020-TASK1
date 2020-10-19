@@ -1,0 +1,2 @@
+2020-08-16 12:30:00,481 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-08-16 12:34:01,759 WARN received SIGINT indicating exit request
