@@ -1,8 +1,5 @@
 ## DAI2020 SMARTS Competition Track 1:  Single Agent, Multi-Lane Cruising
 
-* **队伍名称：** neusmatcar
-* **队伍成员：** 周天泽、王晨飞
-
 ### 文件说明
 
 * starter_kit: 包含训练程序、测试程序
